@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Megar Servicios</title>
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- CDN de Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Configuración personalizada -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#42a4e3',
+              hover: '#292929',
+            },
+            fontFamily: {
+              alfa: ['"Zalando Sans"', 'cursive'],
+            },
+          },
+        },
+      };
+    </script>
+    
+  </head>
+
+  <body class="bg-blanco text-white min-h-screen flex flex-col items-center justify-center font-alfa">
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img src="assets/logo.jpg" alt="Logo" class="h-12 w-auto md:h-16"/>
+        </div>
+        
+        <!-- Secciones -->
+        <nav class="hidden md:flex space-x-8 font-semibold text-celeste">
+          <a href="#inicio" class="hover:text-naranja transition">Inicio</a>
+          <a href="#nosotros" class="hover:text-naranja transition">Nosotros</a>
+          <a href="#servicios" class="hover:text-naranja transition">Servicios</a>
+          <a href="#contacto" class="hover:text-naranja transition">Contacto</a>
+        </nav>
+
+        <!-- Botón para menú móvil -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-800 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menú móvil -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <a href="#inicio" class="block px-6 py-3 border-b border-gray-200 hover:text-naranja">Inicio</a>
+        <a href="#nosotros" class="block px-6 py-3 border-b border-gray-200 hover:text-naranja">Nosotros</a>
+        <a href="#servicios" class="block px-6 py-3 border-b border-gray-200 hover:text-naranja">Servicios</a>
+        <a href="#contacto" class="block px-6 py-3 hover:text-naranja">Contacto</a>
+      </div>
+    </header>
+
+    <!-- Sección Inicio -->
+    <section
+      id="inicio"
+      class="relative h-screen flex items-center justify-center bg-blanco text-white px-6 md:px-12"
+      style="background-image: url('https://electrocomsat.es/wp-content/uploads/2021/03/reparacion-aire.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+    >
+      <!-- Overlay oscuro para que el texto resalte -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <!-- Contenido -->
+      <div class="relative z-10 max-w-5xl flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-12 w-full">
+        
+        <!-- Texto -->
+        <div class="md:w-1/2 flex flex-col items-center md:items-start">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]">
+            Bienvenido a <span class="text-naranja drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]">M<span class="text-gris drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]">EGA</span>R</span> Servicios
+          </h1>
+          <p class="text-lg md:text-xl mb-8 text-white max-w-md drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]">
+            Ofrecemos servicio técnico, instalación y mantenimiento de equipos de
+            refrigeración y aires acondicionados.
+          </p>
+          <a
+            href="#contacto"
+            class="bg-naranja text-gris font-bold px-8 py-4 rounded-full transition-colors duration-500 ease-in-out hover:bg-celeste hover:text-white hover:scale-105 drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)] hover:drop-shadow-[0_4px_12px_rgba(0,255,255,0.8)]"
+          >
+            Contáctanos
+          </a>
+        </div>
+
+        <!-- Imagen decorativa opcional -->
+        <div class="md:w-1/2 hidden md:block">
+          <img
+            src="https://service-split-fedders.com.ar/img/service-aireacondicionado.webp"
+            alt="Aire acondicionado"
+            class="rounded-2xl shadow-lg w-full transition duration-500 hover:scale-105"
+          />
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="section bg-white text-primary py-24 px-6">
+      <h2 class="text-4xl font-bold text-center mb-8 text-celeste drop-shadow-[0_2px_2px_rgba(0,0,0,0.2)]">Nosotros</h2>
+      <p class="max-w-3xl mx-auto text-center text-lg text-celeste ">
+        Somos empresa dedicada a crear soluciones y ofrecer servicios de reparación, instalación y mantenimiento de equipos de refrigeracion para empresas y particulares. Nuestro equipo altamente capacitado cuenta con amplia experiencia para brindar resultados de calidad.
+      </p>
+      <div class="">
+          <img
+            src="https://reparacionjgservice.com.ar/images/serviciotecnico.jpg"
+            alt="Aire acondicionado"
+            class="w-full"
+          />
+        </div>
+      <h2 class="text-4xl font-bold text-center mt-16 mb-8 text-celeste drop-shadow-[0_2px_2px_rgba(0,0,0,0.2)]">
+        Nuestros Trabajos
+      </h2>
+
+      <div class="relative max-w-6xl mx-auto"> 
+        <div class="flex overflow-x-auto gap-6 scroll-smooth snap-x snap-mandatory px-4 py-4">
+          <img src="https://instalklima.com.ar/wp-content/uploads/2025/08/Reparar.jpg" alt="Trabajo 1"
+              class="snap-start flex-shrink-0 w-64 h-40 object-cover rounded-lg shadow-lg transition duration-500 hover:scale-105">
+          <img src="https://homesolution.net/ar/uploads/prestador/25297.jpg" alt="Trabajo 2"
+              class="snap-start flex-shrink-0 w-64 h-40 object-cover rounded-lg shadow-lg transition duration-500 hover:scale-105">
+          <img src="https://friopanama.com/wp-content/uploads/2021/02/portafolio1-600x600.jpg" alt="Trabajo 3"
+              class="snap-start flex-shrink-0 w-64 h-40 object-cover rounded-lg shadow-lg transition duration-500 hover:scale-105">
+          <img src="https://www.frioelectric.ec/wp-content/uploads/2020/06/gal-aire-acondicionado1.jpg" alt="Trabajo 4"
+              class="snap-start flex-shrink-0 w-64 h-40 object-cover rounded-lg shadow-lg transition duration-500 hover:scale-105">
+          <img src="https://instalklima.com.ar/wp-content/uploads/2025/08/Reparar.jpg" alt="Trabajo 1"
+              class="snap-start flex-shrink-0 w-64 h-40 object-cover rounded-lg shadow-lg transition duration-500 hover:scale-105">
+          <img src="https://homesolution.net/ar/uploads/prestador/25297.jpg" alt="Trabajo 2"
+              class="snap-start flex-shrink-0 w-64 h-40 object-cover rounded-lg shadow-lg transition duration-500 hover:scale-105">
+          <img src="https://friopanama.com/wp-content/uploads/2021/02/portafolio1-600x600.jpg" alt="Trabajo 3"
+              class="snap-start flex-shrink-0 w-64 h-40 object-cover rounded-lg shadow-lg transition duration-500 hover:scale-105">
+          <img src="https://www.frioelectric.ec/wp-content/uploads/2020/06/gal-aire-acondicionado1.jpg" alt="Trabajo 4"
+              class="snap-start flex-shrink-0 w-64 h-40 object-cover rounded-lg shadow-lg transition duration-500 hover:scale-105">    
+        </div>
+        <!-- Botones de navegación -->
+        <button onclick="scrollCarousel(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 bg-celeste text-white p-2 rounded-full shadow-lg hover:bg-hover transition">‹</button>
+        <button onclick="scrollCarousel(1)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-celeste text-white p-2 rounded-full shadow-lg hover:bg-hover transition">›</button>
+      </div>
+      <h2 class="text-4xl font-bold text-center mt-8 mb-8 text-celeste drop-shadow-[0_2px_2px_rgba(0,0,0,0.2)]">Nuestros Clientes</h2>
+      <div class="max-w-5xl mx-auto grid md:grid-cols-4 gap-6 items-center">
+        <img src="assets/logo.jpg" alt="Cliente 1" class="mx-auto h-50 rounded-2xl shadow-lg w-full transition duration-500 hover:scale-105">
+        <img src="assets/logo.jpg" alt="Cliente 2" class="mx-auto h-50 rounded-2xl shadow-lg w-full transition duration-500 hover:scale-105">
+        <img src="assets/logo.jpg" alt="Cliente 3" class="mx-auto h-50 rounded-2xl shadow-lg w-full transition duration-500 hover:scale-105">
+        <img src="assets/logo.jpg" alt="Cliente 4" class="mx-auto h-50 rounded-2xl shadow-lg w-full transition duration-500 hover:scale-105">
+      </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="section bg-celeste text-primary py-24 px-6">
+  <h2 class="text-4xl font-bold text-center text-white mb-12 drop-shadow-[0_2px_2px_rgba(0,0,0,0.2)]">
+    Servicios
+  </h2>
+
+  <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+    <!-- Card 1 -->
+    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:scale-105 overflow-hidden">
+      <img src="https://www.ecotermica.com.ar/images/reparacion/1.jpg" alt="Instalación" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-2xl font-semibold mb-4">Instalación</h3>
+        <p class="text-gris">Instalamos todo tipo de equipos de refrigeración y aires acondicionados.</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:scale-105 overflow-hidden">
+      <img src="https://electroclimax.com.ar/images/servicios/Aire-Acondicionado-Mantenimiento.jpg" alt="Mantenimiento" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-2xl font-semibold mb-4">Mantenimiento</h3>
+        <p class="text-gris">Damos mantenimiento preventivo a equipos para evitar fallas y limpieza.</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:scale-105 overflow-hidden">
+      <img src="https://instalklima.com.ar/wp-content/uploads/2025/08/Reparar.jpg" alt="Reparación" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-2xl font-semibold mb-4">Reparación</h3>
+        <p class="text-gris">Reparamos tu equipo asegurando su correcto funcionamiento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="section text-primary py-24 px-6 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-center text-celeste mb-12 drop-shadow-[0_2px_2px_rgba(0,0,0,0.2)]">
+      Contacto
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-start">
+      <!-- Datos de la empresa -->
+      <div class="space-y-6">
+        <h3 class="text-2xl font-semibold text-primary mb-4">Información de contacto</h3>
+        <p class="text-gris">Estamos ubicados en:</p>
+        <p class="text-lg font-medium">📍 Av. Siempre Viva 742, Buenos Aires, Argentina</p>
+
+        <p class="text-gris mt-4">Podés comunicarte con nosotros:</p>
+        <ul class="space-y-2 text-lg">
+          <li>📞 <strong>Teléfono:</strong> +54 11 5555-5555</li>
+          <li>📧 <strong>Email:</strong> contacto@empresa.com</li>
+          <li>🕒 <strong>Horario:</strong> Lunes a Viernes de 9 a 18 hs</li>
+        </ul>
+
+        <div class="mt-6">
+          <iframe
+            class="w-full h-64 rounded-lg shadow-md"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.913618077191!2d-58.38159308477095!3d-34.60368448045909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac60f4f4b9b%3A0x2c6aa2f2e4c5e1f0!2sObelisco!5e0!3m2!1ses-419!2sar!4v1693356992732!5m2!1ses-419!2sar"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <form class="bg-naranja p-8 rounded-lg shadow-md flex flex-col gap-6">
+        <input
+          type="text"
+          placeholder="Nombre"
+          class="p-4 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-celeste"
+        />
+        <input
+          type="email"
+          placeholder="Correo electrónico"
+          class="p-4 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-celeste"
+        />
+        <textarea
+          placeholder="Mensaje"
+          rows="5"
+          class="p-4 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-celeste"
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-celeste text-white font-bold py-3 rounded shadow-md hover:bg-gris hover:shadow-lg transition duration-300"
+        >
+          Enviar Mensaje
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <footer class="w-full text-center py-6 mt-auto bg-celeste text-primary">
+      <span class="text-white">© 2025 Megar Servicios. Todos los derechos reservados.</span>
+    </footer>
+  </body>
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+  <script>
+    const carousel = document.querySelector("#nosotros .flex.overflow-x-auto");
+    function scrollCarousel(direction) {
+      carousel.scrollBy({
+        left: direction * 300, // Ajusta la distancia de scroll
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</html>

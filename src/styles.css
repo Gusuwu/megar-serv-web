@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-blanco {
+  background-color: rgb(255, 255, 255);
+}
+
+.bg-naranja {
+  background-color: rgb(241, 119, 52);
+}
+
+.bg-celeste {
+  background-color: rgb(66, 164, 227);
+}
+.hover\:bg-celeste:hover {
+  background-color: rgb(66, 164, 227);
+}
+
+.bg-gris {
+  background-color: rgb(41, 41, 41);
+}
+.hover\:bg-gris:hover {
+  background-color: rgb(41, 41, 41);
+}
+
+.text-celeste {
+  color: rgb(66, 164, 227);
+}
+
+.text-naranja {
+  color: rgb(241, 119, 52);
+}
+.hover\:text-naranja:hover {
+  color: rgb(241, 119, 52);
+}
+
+.text-gris {
+  color: rgb(41, 41, 41);
+}
+
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.w-90{
+  width: 90%;
+}
